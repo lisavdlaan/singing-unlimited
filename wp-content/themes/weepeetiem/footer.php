@@ -33,6 +33,40 @@
 <?php wp_footer(); ?>
 
 <script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
+<?php 
+
+add_action('init', 'register_my_scripts');
+ 
+function register_my_scripts() {
+	wp_register_script( 'flexslider', get_stylesheet_directory_uri() . '/flexslider/jquery.flexslider-min.js', array('jquery'), '1.0.0', true );
+}
+ 
+add_action('wp_footer', 'print_my_script', 99);
+ 
+function print_my_script() {
+	global $add_my_script, $ss_atts;
+	if ( $add_my_script ) {
+		$speed = $ss_atts['slideshowspeed']*1000;
+		echo "<script type=\"text/javascript\">
+jQuery(document).ready(function($) {
+	$('head').prepend($('<link>').attr({
+		rel: 'stylesheet',
+		type: 'text/css',
+		media: 'screen',
+		href: '" . get_stylesheet_directory_uri() . "/flexslider/flexslider.css'
+	}));
+	$('.flexslider').flexslider({
+		animation: '".$ss_atts['animation']."',
+		slideshowSpeed: ".$speed.",
+		controlNav: false
+	});
+});
+</script>";
+		wp_print_scripts('flexslider');
+	} else {
+		return;
+	}
+} ?>
 	
 </body>
 

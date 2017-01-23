@@ -62,13 +62,19 @@
 					    <?php bloginfo('name'); ?>
 				 </a>
 		      </div>
-		
-		
-		
-		     *<img title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" src="<?php bloginfo('template_directory'); ?>/images/koor geheel bijgesneden.jpg">
+
+
+			<a class="toggleMenu" href="#">Menu</a>
+				<?php wp_nav_menu( array( 
+					'theme_location' => 'main-menu', 
+					'container_class' => 'menu container', 
+					'items_wrap' => '<ul>%3$s</ul>' 
+					) ); 
+				?>
+		</header>
+
+
+
 		      
-		      <a class="toggleMenu" href="#">Menu</a>
-		      
-		      <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu container', 'items_wrap' => '<ul>%3$s</ul>' ) ); ?>
-		      
-	   </header>
+
+	   
