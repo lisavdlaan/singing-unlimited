@@ -1,0 +1,139 @@
+/*------------------------------------------------------------------------------------------------------*/
+/* Media queries
+/*------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 479px) {
+	
+	.container {
+		width: 270px;
+		padding: 0 15px;
+	}
+	
+	/* Main menu */
+	
+	.active {
+		display: block;
+	}
+	
+	.menu ul {
+		background: #175e4c;
+	}
+	
+	.menu ul > li {
+		float: none;
+	}
+	
+	.menu ul > li > .parent {
+		background-position: 95% 50%;
+	}
+	
+	.menu ul li li .parent {
+		background-image: url("images/downArrow.png");
+		background-repeat: no-repeat;
+		background-position: 95% 50%;
+	}
+	
+	.menu ul ul {
+		display: block;
+		width: 100%;
+	}
+	
+	.menu ul a {
+		color: #fff;
+	}
+	
+	.menu ul > li.hover > ul , .menu ul li li.hover ul {
+		position: static;
+	}
+	
+	/* Responsive table */
+	
+	/* 
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	td:nth-of-type(1):before { content: "Occasion"; }
+	td:nth-of-type(2):before { content: "Naam"; }
+	td:nth-of-type(3):before { content: "Bouwjaar"; }
+	td:nth-of-type(4):before { content: "Kilometerstand"; }
+	td:nth-of-type(5):before { content: "Brandstof"; }
+	td:nth-of-type(6):before { content: "Prijs"; }
+	*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+		
+	.container {
+		width: 430px;
+		padding: 0 15px;
+	}
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+	.row .column {
+		width: 100%;
+		margin: 0;
+	}
+	
+	.boxed {
+		width: 100%;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	
+	.container {
+		width: 700px;
+	}
+	
+	.boxed {
+		width: 768px;			
+	}
+	
+	.row .onecol		{ width: 40px; }
+	.row .twocol		{ width: 100px; }
+	.row .threecol		{ width: 160px; }
+	.row .fourcol		{ width: 220px; }
+	.row .fivecol		{ width: 280px; }
+	.row .sixcol		{ width: 340px; }
+	.row .sevencol		{ width: 400px; }
+	.row .eightcol		{ width: 460px; }
+	.row .ninecol		{ width: 520px; }
+	.row .tencol		{ width: 580px; }
+	.row .elevencol		{ width: 640px; }
+	.row .twelvecol		{ width: 700px; }
+	
+}

@@ -1,0 +1,31 @@
+/* --- OTHER USERS --- */
+
+/* WORDPRESS ITEMS */
+#menu-posts, #wp-admin-bar-new-post {
+	display: inherit;
+}
+
+#menu-links {
+	display: none;
+}
+
+#menu-comments, #wp-admin-bar-comments {
+	display: none;
+}
+
+/* CUSTOM POSTS */
+
+/* CUSTOM REMOVALS */
+
+#toplevel_page_wpcf {
+	display: none;
+}
+
+#toplevel_page_edit-post_type-view {
+	display: none;
+}
+
+/*Remove Yoast WordPress SEO Sidebar*/
+.postbox-container #sidebar {
+	display: none;
+}
