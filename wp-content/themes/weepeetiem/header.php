@@ -29,9 +29,7 @@
 	   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/_/js/jquery.gmap.min.js"></script>
 	
 	   <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
-	   
-	   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	   
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
    
 	   <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -55,23 +53,23 @@
 
 <div id="wrapper" class="boxed">
 	   
-	   <header id="mainheader">
-			
-      		<div id="logo">
-		      		 <a href="<?php echo site_url(); ?>" title="<?php bloginfo('name'); ?>">
-					    <?php bloginfo('name'); ?>
-				 </a>
-		      </div>
+   <header id="mainheader">
+		
+  		<div id="logo">
+	      		 <a href="<?php echo site_url(); ?>" title="<?php bloginfo('name'); ?>">
+				    <?php bloginfo('name'); ?>
+			 </a>
+	      </div>
 
 
-			<a class="toggleMenu" href="#">Menu</a>
-				<?php wp_nav_menu( array( 
-					'theme_location' => 'main-menu', 
-					'container_class' => 'menu container', 
-					'items_wrap' => '<ul>%3$s</ul>' 
-					) ); 
-				?>
-		</header>
+		<div class="hamburger"><a class="toggleMenu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+			<?php wp_nav_menu( array( 
+				'theme_location' => 'main-menu', 
+				'container_class' => 'menu container', 
+				'items_wrap' => '<ul>%3$s</ul>' 
+				) ); 
+			?>
+	</header>
 
 
 
