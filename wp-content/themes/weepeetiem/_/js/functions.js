@@ -59,7 +59,7 @@ $(document).ready(function(){
     });
 
     var adjustMenu = function() {
-        if (ww < 768) {
+        if (ww < 959) {
             $(".toggleMenu").css("display", "inline-block");
             if (!$(".toggleMenu").hasClass("active")) {
                 $(".nav").hide();
@@ -73,7 +73,7 @@ $(document).ready(function(){
                 $(this).parent("li").toggleClass("hover");
             });
         } 
-        else if (ww >= 768) {
+        else if (ww >= 959) {
             $(".toggleMenu").css("display", "none");
             $(".nav").show();
             $(".nav li").removeClass("hover");
