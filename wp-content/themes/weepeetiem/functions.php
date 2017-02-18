@@ -192,3 +192,42 @@ function simple_slider_shortcode($atts = null) {
 		</ul>
 	</div>';
 }
+
+function social_sharing_buttons($content)  {
+   global  $post;
+  
+  if(  is_single()  &&  !  empty(  $GLOBALS['post']  )  )  {
+  
+    //  Get  current  page  URL  
+    $socialURL  =  urlencode(get_permalink());
+  
+    //  Get  current  page  title
+    $socialTitle  =  str_replace(  '  ',  '%20',  get_the_title());
+    
+  
+    //  Construct  sharing  URL  without  using  any  script
+    $twitterURL  =  'https://twitter.com/intent/tweet?text='.$socialTitle.'&amp;url='.$socialURL.'&amp;via=social';
+    $facebookURL  =  'https://www.facebook.com/sharer/sharer.php?u='.$socialURL;
+    $googleURL  =  'https://plus.google.com/share?url='.$socialURL;
+    $linkedInURL  =  'https://www.linkedin.com/shareArticle?mini=true&url='.$socialURL.'&amp;title='.$socialTitle;
+
+
+  
+    //  Add  sharing  button  at  the  end  of  page/page  content
+    $content  .=  '<div  class="social-social">';
+    $content  .=  '<div>Share  this:</div>';
+    $content  .=  '<a  class="social-link  social-facebook"  href="'.$facebookURL.'"  target="_blank"></a>';
+    $content  .=  '<a  class="social-link  social-google"  href="'.$googleURL.'"  target="_blank"></a>';
+    $content  .=  '<a  class="social-link  social-twitter"  href="'.  $twitterURL  .'"  target="_blank"></a>';
+    $content  .=  '<a  class="social-link  social-linkedin"  href="'.$linkedInURL.'"  target="_blank"></a>';
+    $content  .=  '<a  class="social-link  post-mail"  href="mailto:?subject=I  want  to  share  this  article  with  you:  '  .  get_the_title()  .  '&body='  .  get_permalink()  .  '"  title="Send  this  article  to  a  friend!"></a>';
+    $content  .=  '<a  class="social-link  post-print"  href="javascript:window.print()"></a>';
+    $content  .=  '</div>';
+    
+    return  $content;
+  }else{
+    //  if  not  a  post/page  then  don't  include  sharing  button
+    return  $content;
+  }
+};
+	add_filter(  'the_content',  'social_sharing_buttons');
