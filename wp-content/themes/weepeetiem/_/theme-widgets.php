@@ -11,6 +11,16 @@ function weepeetiem_widgets_init() {
 	
 	register_widget('weepeetiem_homepage_button_widget');
 	register_widget('weepeetiem_homepage_block_widget');
+
+    register_sidebar(array(
+            'name' => __('Home sidebar' ),
+            'id'   => 'home-widgets-3',
+            'description'   => __( 'These are widgets for the homepage blocks.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+        ));
 	
 	register_sidebar(array(
     		'name' => __('Blog' ),
@@ -31,26 +41,6 @@ function weepeetiem_widgets_init() {
     		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	));
-
-    	register_sidebar(array(
-    		'name' => __('Home 1' ),
-    		'id'   => 'home-widgets-1',
-    		'description'   => __( 'These are widgets for the homepage.' ),
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    		'after_widget'  => '</div>',
-    		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-    	));
-    
-    	register_sidebar(array(
-    		'name' => __('Home 2' ),
-    		'id'   => 'home-widgets-2',
-    		'description'   => __( 'These are widgets for the homepage blocks.' ),
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    		'after_widget'  => '</div>',
-    		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-    	));
     
     	register_sidebar(array(
     		'name' => __('Footer' ),
