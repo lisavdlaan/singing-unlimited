@@ -12,19 +12,13 @@ Template Name: Homepage
     
     <div class="container">
         <div class="row homepage">
-            <?php if (is_active_sidebar('home-widgets-1')) { ?>
-                <div class="large-4">
-                    <?php dynamic_sidebar('home-widgets-1'); ?>
-                </div>
-            <?php } ?>
-
-            <?php if (is_active_sidebar('home-widgets-2')) { ?>
-                <div class="large-3">
-                    <?php dynamic_sidebar('home-widgets-2'); ?>
-                </div>
-            <?php } ?>
-
+            <?php the_content(); ?>
         </div>
+        <?php if (is_active_sidebar('home-widgets-3')) { ?>
+                <div class="large-3">
+                    <?php dynamic_sidebar('home-widgets-3'); ?>
+                </div>
+        <?php } ?>
     </div>
         
 <?php get_footer(); ?>
