@@ -1,6 +1,6 @@
 /*   
-Theme Name: WeePeeTiem
-Description: WeePeeTiem theme
+Theme Name: SU-theme
+Description: SU theme
 Author: Jeroen Taal
 Author URI: mailto:me@jeroentaal.com
 Version: 1.0
@@ -242,15 +242,25 @@ mark {background-color: #1360B2; color: #000; font-style: italic; font-weight: b
 	background-color: #FFF;
 }
 
-.large-4 {
-    width: 65%;
+.row.homepage {
+    width: 66%;
     float: left;
     margin-right: 25px;
 }
 
 .large-3 {
     float: left;
-    width: 32%;
+    width: 28%;
+}
+
+@media screen and (max-width: 959px) {
+	.row.homepage {
+		width: 100%;
+	}
+	.large-3 {
+		width: 100%;
+		margin-bottom: 25px;
+	}
 }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -290,10 +300,17 @@ mark {background-color: #1360B2; color: #000; font-style: italic; font-weight: b
 /*------------------------------------------------------------------------------------------------------*/
 /* Main menu
 /*------------------------------------------------------------------------------------------------------*/
+i.fa.fa-bars {
+	font-size: 30px;
+}
+
+.hamburger {
+    text-align: right;
+}
 
 .toggleMenu {
     display:  none;
-    background: #666;
+    background: #1360b2;
     padding: 10px 15px;
     color: #fff;
 }
@@ -328,6 +345,11 @@ mark {background-color: #1360B2; color: #000; font-style: italic; font-weight: b
 
 .nav li {
     position: relative;
+    border-bottom: 1px solid #0052a9;
+}
+
+.nav li:last-child {
+	border: none;
 }
 
 .nav > li {
@@ -475,6 +497,9 @@ ul.slides li {
 	border-bottom: 4px solid #909190;
 }
 
+.homepage {
+	margin-bottom: 25px;
+}
 /*------------------------------------------------------------------------------------------------------*/
 /* Content
 /*------------------------------------------------------------------------------------------------------*/
@@ -729,6 +754,8 @@ ul.children {
 .large-3 .widget {
     border-left: 2px dotted #1360b2;
     padding: 0 10px;
+    border-bottom: 2px dotted #1360b2;
+    background: url(images/bg.gif) repeat;
 }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -986,7 +1013,7 @@ div.wpcf7-mail-sent-ok {
 .slide-media {
 	background-size: cover !important;
     height: 450px;
-    background-position: bottom center !important;
+    background-position: top center !important;
 }
 
 .flex-control-nav {
@@ -1001,3 +1028,34 @@ div.wpcf7-mail-sent-ok {
 	display: none;
 }
 
+.social-link {
+    font-family: 'FontAwesome';
+    font-size: 35px;
+    display: inline-block;
+    margin: 10px 2px;
+    font-weight: normal;
+}
+
+.social-facebook:before {
+	content: "\f230";
+}
+
+.social-google:before {
+	content: '\f0d4';
+}
+
+.social-twitter:before {
+	content: '\f081';
+}
+
+.social-linkedin:before {
+	content: '\f08c';
+}
+
+.post-mail:before {
+	content: '\f199';
+}
+
+.post-print:before {
+	content: '\f02f';
+}

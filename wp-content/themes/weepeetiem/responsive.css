@@ -15,10 +15,6 @@
 		display: block;
 	}
 	
-	.menu ul {
-		background: #175e4c;
-	}
-	
 	.menu ul > li {
 		float: none;
 	}
